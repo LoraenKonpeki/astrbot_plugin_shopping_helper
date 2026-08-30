@@ -1,0 +1,8 @@
+name: astrbot_plugin_shopping_helper
+display_name: 联盟购物助手
+desc: 用京东联盟等官方接口搜索商品、查看详情并进行比价。
+version: v0.1.0
+author: Loraen_Konpeki
+repo: https://github.com/LoraenKonpeki/astrbot_plugin_shopping_helper
+support_platforms:
+  - aiocqhttp

@@ -1,0 +1,42 @@
+{
+  "enabled_platforms": {
+    "description": "启用的平台，首版仅支持 jd",
+    "type": "list",
+    "default": ["jd"]
+  },
+  "jd_app_key": {
+    "description": "京东联盟 App Key",
+    "type": "string",
+    "default": ""
+  },
+  "jd_app_secret": {
+    "description": "京东联盟 App Secret",
+    "type": "string",
+    "default": ""
+  },
+  "jd_access_token": {
+    "description": "京东联盟 access token（按你的应用权限填写；留空则不发送）",
+    "type": "string",
+    "default": ""
+  },
+  "jd_site_id": {
+    "description": "京东联盟推广位 siteId，用于生成推广链接；留空时只返回素材链接",
+    "type": "string",
+    "default": ""
+  },
+  "request_timeout_seconds": {
+    "description": "上游请求超时秒数",
+    "type": "int",
+    "default": 12
+  },
+  "cache_ttl_seconds": {
+    "description": "相同搜索的缓存秒数，价格结果仍会标明查询时间",
+    "type": "int",
+    "default": 300
+  },
+  "max_results": {
+    "description": "单次搜索最大返回数量",
+    "type": "int",
+    "default": 8
+  }
+}
