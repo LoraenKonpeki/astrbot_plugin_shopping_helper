@@ -3,8 +3,12 @@ from __future__ import annotations
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.star import Context, Star, register
 
-from service import ShoppingService, format_products, products_as_dicts
-from providers.jd_union import JdUnionError
+try:
+    from .service import ShoppingService, format_products, products_as_dicts
+    from .providers.jd_union import JdUnionError
+except ImportError:
+    from service import ShoppingService, format_products, products_as_dicts
+    from providers.jd_union import JdUnionError
 
 
 @register("shopping_helper", "Loraen_Konpeki", "京东联盟商品搜索与比价助手", "0.1.0")

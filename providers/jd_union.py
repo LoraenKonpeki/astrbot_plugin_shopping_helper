@@ -7,7 +7,10 @@ from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from models import Product
+try:
+    from ..models import Product
+except ImportError:
+    from models import Product
 
 
 JOS_URL = "https://api.jd.com/routerjson"

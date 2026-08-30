@@ -4,8 +4,12 @@ import asyncio
 import time
 from dataclasses import asdict
 
-from models import Product
-from providers.jd_union import JdUnionError, JdUnionProvider
+try:
+    from .models import Product
+    from .providers.jd_union import JdUnionError, JdUnionProvider
+except ImportError:
+    from models import Product
+    from providers.jd_union import JdUnionError, JdUnionProvider
 
 
 class ShoppingService:
